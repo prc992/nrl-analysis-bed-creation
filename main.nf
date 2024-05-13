@@ -2,6 +2,7 @@
 nextflow.enable.dsl=2
 
 process split_tss_samples{
+  maxForks 3
 
   //Docker Image
   container = 'prc992/pyranges:v1.2'
