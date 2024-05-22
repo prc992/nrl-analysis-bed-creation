@@ -3,7 +3,7 @@ nextflow.enable.dsl=2
 
 process split_tss_samples{
   tag "Sample - $sampleId" 
-  maxForks 3
+  //maxForks 3
 
   //Docker Image
   container = 'prc992/pyranges:v1.2'
@@ -22,7 +22,7 @@ process split_tss_samples{
 
   script:
   """
-  python $params.python_prog $csvFile $WINDOW_TSS_DOWNSTREAM $WINDOW_TSS_UPSTREAM $params.MAX_SIZE_FRAGMENT
+  python $params.python_prog $csvFile $WINDOW_TSS_DOWNSTREAM $WINDOW_TSS_UPSTREAM $params.MAX_SIZE_FRAGMENT $params.cpu
   """
 }
 
