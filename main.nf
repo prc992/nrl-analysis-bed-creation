@@ -2,7 +2,7 @@
 nextflow.enable.dsl=2
 
 process split_tss_samples{
-  tag "Sample - $sampleId" 
+  tag "Sample (OneSample) - $sampleId" 
   //maxForks 3
 
   //Docker Image
